@@ -1,0 +1,304 @@
+@charset "utf-8";
+/* common */
+.pc_con{display:block}
+.pc_con{display:block}
+.m_con{display:none}
+.m_con1{display:none}
+.btn_dark{display:none}
+.btn_card{display:inline-block;position:relative;width:30%;padding:0 0 0 5px;font-size:2rem;font-weight:bold;color:#f69f03;text-align:left}
+.btn_card:before{position:absolute;bottom:-10px;left:-10px;content:"";clear:both;display:inline-block;width:75%;height:2px;background:#ffd17f}
+.btn_card:after{position:absolute;bottom:-15px;left:0;content:"";clear:both;width:100%;height:20px;background:url("../images/btn_card.png") no-repeat;background-size:contain;transition:0.5s}
+.btn_card:focus:after,
+.btn_card:hover:after{left:20px}
+
+#goverment_contents{padding-left:165px !important}
+#gnb_wrap{position:absolute;z-index:9980;top:0;right:0;width:100%;height:100px;background:rgba(255, 255, 255, 0.3)}
+.dark #gnb_wrap{position:absolute;z-index:9980;width:100%;height:100px;background:rgba(0, 0, 0, 0);transition:0.5s}
+#gnb_wrap:hover{position:absolute;width:100%;height:100px;background:rgba(255, 255, 255, 1)}
+.dark #gnb_wrap:hover{position:absolute;width:100%;height:100px;background:rgba(0, 0, 0, 1)}
+#gnb{position:absolute;right:100px;top:0}
+.depth1{position:relative;float:left;font-weight:normal}
+.depth1>a.active{font-weight:600}
+.depth_n>a:hover{font-weight:600}
+.depth1>a{display:inline-block;height:100px;padding:0 40px;font-size:1.8rem;font-weight:300;line-height:100px}
+.depth2{display:none;position:absolute;right:50%;width:650px;height:45px;transition:0.5s;text-align:center;transform:translateX(50%)}
+#gnb>li:last-child>.depth2{transform:translateX(0%);right:0}
+.depth2.active{display:block}
+.bg_depth2{display:none;position:relative;top:100px;width:100%;height:45px;background:rgba(255, 255, 255, 0.5)}
+.dark .bg_depth2{display:none;position:relative;top:100px;width:100%;height:45px;background:rgba(0, 0, 0, 0.5)}
+.bg_depth2.active{display:block}
+.dark .depth2.active{display:block}
+.depth2>li{display:inline-block;height:100%}
+.depth2>li>a{display:inline-block;height:100%;padding:0 20px;font-size:1.6rem;font-weight:300;line-height:45px}
+.depth2>li>a:hover{display:inline-block;height:100%;font-weight:bold}
+#tit_goverment{position:relative;overflow:hidden;height:100vh;background:url("../images/bg_tit_goverment_4.png") no-repeat 100px 0;background-size:100% 100%;animation:bg_moving 13s forwards}
+#goverment_content_txt{position:relative;z-index:1000;padding:17vw 45vw 0 0;text-align:right}
+#goverment_content_txt>div{margin-bottom:20px;font-size:2.8vw}
+#goverment_content_txt>span{font-size:1.7vw}
+#tit_goverment>img{position:absolute;top:0;right:-200px;max-width:100%;opacity:0}
+#tit_goverment>.benefit_mask_2{opacity:1}
+#tit_goverment>img:nth-of-type(1){right:0;opacity:1}
+#tit_goverment>img:nth-of-type(2){top:-27px;animation:moving 4s 1s forwards}
+#tit_goverment>img:nth-of-type(3){animation:moving 4s 4s forwards}
+#tit_goverment>img:nth-of-type(4){animation:moving 4s 7s forwards}
+#tit_goverment>img:nth-of-type(5){animation:moving2 4s 10s forwards}
+@keyframes moving{
+  0%{right:-200px;opacity:0}
+  65%{opacity:1}
+  100%{right:-100px;opacity:0}
+}
+@keyframes moving2{
+  0%{right:-200px;opacity:0}
+  100%{right:-150px;opacity:1} 
+}
+@keyframes bg_moving{
+  0%{background-image:url("../images/bg_tit_goverment_4.png")}
+  25%{background-image:url("../images/bg_tit_goverment_4.png")}
+  50%{background-image:url("../images/bg_tit_goverment_5.png")}
+  75%{background-image:url("../images/bg_tit_goverment_2.png")}
+  100%{background-image:url("../images/bg_tit_goverment_1.png")} 
+}
+#goverment_solution{padding:100px 50px;background:url("../images/bg_solution.png") no-repeat top center;background-size:90%;background-origin:padding-box}
+.dark #goverment_solution{padding:100px 50px;background:url("../images/bg_solution_dark.png") no-repeat top center;background-size:90%;background-origin:padding-box}
+#goverment_solution_txt{position:relative;padding:40px}
+#goverment_solution_txt>div>span:first-child{display:block;font-size:3rem;font-weight:bold}
+#goverment_solution_txt>div>span:last-child{font-size:1.8rem}
+#goverment_solution_txt>a{position:absolute;top:100px;right:100px;width:15%}
+#goverment_solution_visual{height:351px;margin-bottom:10%;background:url("../images/img_solution.png") no-repeat center center}
+#goverment_service{position:relative;background:url("../images/bg_wave_service.png") no-repeat top center;background-size:90%;background-origin:padding-box}
+.dark #goverment_service{position:relative;background:url("../images/bg_wave_service_dark.png") no-repeat top center;background-size:90%;background-origin:padding-box}
+#goverment_service>div{padding:500px 0 0;background:url("../images/img_wave_service.png") no-repeat center center;background-size:89%}
+#goverment_service>div>div{float:left;width:33.3333%;text-align:center}
+.goverment_service_visual{position:absolute;width:230px;height:230px;margin-left:85px;border-radius:115px;background-size:contain}
+#goverment_service_1 .goverment_service_visual{top:150px;border:5px solid #ed2626;background-image:url("../images/img_wave_service_1.png")}
+#goverment_service_2 .goverment_service_visual{top:80px;border:5px solid #f36c20;background-image:url("../images/img_wave_service_2.png")}
+#goverment_service_3 .goverment_service_visual{top:150px;border:5px solid #f99c1d;background-image:url("../images/img_wave_service_3.png")}
+.goverment_service_txt>span:first-child{font-size:3rem;font-weight:bold}
+.goverment_service_txt>span:last-child{font-size:2rem;font-weight:lighter}
+#goverment_service>a{display:block;width:15%;margin:50px auto 150px}
+#goverment_content4{padding:100px 50px;background:url("../images/bg_partnerships_content4.png") no-repeat top center;background-size:90%;background-origin:padding-box}
+.dark #goverment_content4{padding:100px 50px;background:url("../images/bg_partnerships_content4_dark.png") no-repeat top center;background-size:90%;background-origin:padding-box}
+#goverment_content4_txt{padding:40px;text-align:right}
+#goverment_content4_txt a{width:20%}
+#goverment_content4_txt>span{display:inline-block;font-size:3rem;font-weight:bold;text-align:right}
+#goverment_content4_visual>iframe{display:block;width:100%;height:40vw;margin:0 auto}
+
+/* tablet to mobile */
+@media all and (max-width:1439px) {
+  #gnb_wrap,
+  .footer_visual{display:none}
+  .pc_con{display:none}
+  .m_con{display:block}
+  #header_wrap{position:fixed;z-index:9980;width:100%;background:transparent}
+  #header_wrap.active{box-shadow:none;background:#fff}
+  #header{position:relative;top:-1px;width:100%;height:100%;background:rgba(255, 255, 255, 0);transition:0.5s}
+  #header.active{position:relative;width:100%;height:100%;background:rgba(255, 255, 255, 1)}
+  .dark #header{position:relative;width:100%;height:100%;background:rgba(34, 34, 34, 0);transition:0.5s}
+  .dark #header.active{position:relative;width:100%;height:100%;background:rgba(0, 0, 0, 1)}
+  .btn_snb{position:absolute;top:50%;text-indent:-9999px;transform:translateX(-50%) translateY(-50%);background:transparent}
+  .btn_snb:before,
+  .btn_snb:after,
+  .dark .btn_snb:before,
+  .dark .btn_snb:after{position:absolute;left:0;content:"";clear:both;display:block;height:4px;transition-duration:0.5s}
+  .btn_snb:before{top:2px;background:#222;}
+  .dark .btn_snb:before{top:2px;background:#fff;}
+  .btn_snb:after{bottom:0;background:#222;}
+  .dark .btn_snb:after{bottom:0;background:#fff;}
+  .btn_snb>span{background:transparent}
+  .btn_snb>span.on:before{top:10px;left:0;transform:rotate(44deg);transform-origin:top left}
+  .btn_snb.on:before{top:0;left:0;transform:rotate(45deg);transform-origin:top left}
+  .btn_snb.on:after{left:0;transform:rotate(-45deg);transform-origin:bottom left}
+  .bottom_logo{display:none}
+  .dark .bottom_logo{display:none}
+  #snb_wrap{display:block;position:absolute;z-index:-1;top:0;width:400px;height:100vh;background:#fff;transition:1s}
+  #snb_wrap.active{left:0;box-shadow:8px 1px 10px rgba(0, 0, 0, 0.05)}
+  .dark #snb_wrap,
+  #snb_wrap.active{display:block;position:absolute;z-index:-1;top:0;height:100vh;}
+  .dark #snb_wrap{background:#222;transition:1s}
+  input[type=text]{width:85%;padding:0 0 0 15px;border:2px solid #222;border-radius:30px;background:transparent;}
+  .dark input[type=text]{border-color:#fff;}
+  #search_wrap label{display:none}
+  #goverment_solution_txt{padding:2px}
+
+  /* footer */
+  #footer{width:92%}
+  .footer_logo{float:none;margin:0 auto}
+  .dark .footer_logo{float:none;margin:0 auto}
+  #footer_site{float:none;padding:20px 0}
+  #footer_site>ul{padding:0;float:none;text-align:center}
+  #footer_info{float:none;padding:0}
+  .copy{display:block;margin-top:30px;font-weight:bold;text-align:center;}
+}
+
+/* tablet only */
+@media all and (min-width:768px) and (max-width:1439px) {
+  /* common */
+  .t_con{display:block}
+  .m_con1{display:none}
+  .t_center{width:93vw;margin:0 auto}
+  #header_wrap{height:100px;}
+  .top_logo>a{width:150px;margin:0 0 0 20px;padding:0;background:url(../images/logo.svg)no-repeat center center;text-indent:-9999px}
+  .dark .top_logo>a{width:150px;margin:0 0 0 20px;padding:0;background:url(../images/logo_dark.svg)no-repeat center center;text-indent:-9999px}
+  .btn_snb{width:35px;height:35px;left:94%;}
+  .btn_snb:before,
+  .btn_snb:after,
+  .dark .btn_snb:before,
+  .dark .btn_snb:after{width:35px;}
+  .btn_snb>span{width:35px;height:35px;}
+  .btn_snb>span.on:before{width:39px;}
+  .btn_snb.on:before{width:43px;}
+  .btn_snb.on:after{width:43px;top:29px;}
+  #snb_wrap{left:-500px;}
+  .dark #snb_wrap,
+  #snb_wrap.active{width:400px;}
+  .dark #snb_wrap{left:-500px;}
+  #search_wrap{width:90%;margin:150px auto 0}
+  input[type=text]{height:45px;font-size:2rem}
+  .search_button{width:35px;height:35px;margin-left:10px;background:url("../images/ico_search.svg") no-repeat top center;text-indent:-9999px;line-height:40px}
+  .dark .search_button{width:35px;height:35px;margin-left:10px;background:url("../images/ico_search_dark.svg") no-repeat center;text-indent:-9999px;line-height:40px}
+  #snb{margin:0 30px}
+  #snb>li{margin:40px 0}
+  #snb>li>a{font-size:2.4rem;font-weight:bold}
+  #snb>li>ul>li{display:inline-block;margin:10px 25px 10px 0}
+  #snb>li>ul>li>a{font-size:2rem;color:#555}
+  .dark #snb>li>ul>li>a{font-size:2rem;color:#ccc}
+
+  /* goverment */
+  #goverment_contents{padding-left:0 !important;padding-top:100px;width:initial}
+  #m_tit_goverment{width:100%;height:50vw;background-image:url("../images/bg_t_tit_goverment_1.png");background-size:contain;background-repeat:no-repeat;animation:bg_moving 10s}
+  .dark #m_tit_goverment{width:100%;height:50vw;background-image:url("../images/bg_t_tit_goverment_1_dark.png");background-size:contain;background-repeat:no-repeat;animation:bg_moving_dark 10s}
+  #m_goverment_content_txt{padding:15vw 0 0 7.5vw}
+  #m_goverment_content_txt>div{font-size:3.3vw;margin-bottom:20px}
+  #m_goverment_content_txt>span{font-size:2vw}
+  @keyframes bg_moving{
+    0%{background-image:url("../images/bg_t_tit_goverment_4.png")}
+    25%{background-image:url("../images/bg_t_tit_goverment_4.png")}
+    50%{background-image:url("../images/bg_t_tit_goverment_5.png")}
+    75%{background-image:url("../images/bg_t_tit_goverment_2.png")}
+    100%{background-image:url("../images/bg_t_tit_goverment_1.png")} 
+  }
+  @keyframes bg_moving_dark{
+    0%{background-image:url("../images/bg_t_tit_goverment_4_dark.png")}
+    25%{background-image:url("../images/bg_t_tit_goverment_4_dark.png")}
+    50%{background-image:url("../images/bg_t_tit_goverment_5_dark.png")}
+    75%{background-image:url("../images/bg_t_tit_goverment_2_dark.png")}
+    100%{background-image:url("../images/bg_t_tit_goverment_1_dark.png")} 
+  }
+  #goverment_solution,
+  #goverment_service,
+  #goverment_content4,
+  .dark #goverment_solution,
+  .dark #goverment_service,
+  .dark #goverment_content4{margin:70px 0 140px;padding:0 20px;background-origin:content-box;background-position:top}
+  #goverment_solution_txt>div>span:first-child{text-align:center;font-size:3rem}
+  #goverment_solution_txt>div>span:last-child{display:block;text-align:center;font-size:2rem}
+  #goverment_solution_txt>a{top:25vh;left:50%;width:30%;font-size:2.5rem;transform:translateX(-50%)}
+  #goverment_solution_visual{height:25vh;margin-top:10vh;margin-bottom:0;background-position:bottom}
+  #goverment_service>div{padding:35vh 0 0;background:none}
+  #goverment_service>a{width:30%;margin:20px auto;font-size:2.5rem}
+  #goverment_service_1 .goverment_service_visual,
+  #goverment_service_2 .goverment_service_visual,
+  #goverment_service_3 .goverment_service_visual{top:15vh}
+  .goverment_service_visual{width:25vw;height:25vw;margin:0 5vw;background-repeat:no-repeat}
+  .goverment_service_txt>span:first-child{display:block;margin:10px 0;font-size:2.5rem}
+  .goverment_service_txt>span:last-child{font-size:2rem}
+  #goverment_content4_txt{padding:0;text-align:center}
+  #goverment_content4_txt>span{padding:50px 0 0;text-align:center;font-size:3rem}
+  #goverment_content4_txt a{width:30%;margin:20px 0;font-size:2.5rem}
+  #footer_wrap{height:600px;padding:50px 0 0}
+  .dark #footer_wrap{height:600px;padding:50px 0 0}
+  .site_map_1 a,
+  .site_map_2 a{font-size:2rem;line-height:40px}
+  .sns_wrap{width:40%;margin:0 auto}
+  .sns_wrap>a{margin:0 16px}
+  .copy{font-size:1.6rem;line-height:30px}
+}
+
+/* mobile only */
+@media all and (max-width:767px) {
+  /* common */
+  .t_con{display:none}
+  .m_con1{display:block}
+  .center{width:initial}
+  .m_center{width:98vw;margin:0 auto}
+  #header_wrap{height:60px;}
+  .top_logo>a{display:inline-block;width:110px;height:60px;padding:0 10px;background:url(../images/logo.svg)no-repeat center center;background-origin:content-box;text-indent:-9999px}
+  .dark .top_logo>a{display:inline-block;width:110px;height:60px;padding:0 10px;background:url(../images/logo_dark.svg)no-repeat center center;background-origin:content-box;text-indent:-9999px}
+  .btn_snb{width:25px;height:25px;left:93%;}
+  .btn_snb:before,
+  .btn_snb:after,
+  .dark .btn_snb:before,
+  .dark .btn_snb:after{width:25px;}
+  .btn_snb>span{width:25px;height:25px;}
+  .btn_snb>span.on:before{width:30px;}
+  .btn_snb.on:before{width:30px;}
+  .btn_snb.on:after{width:30px;top:20px;}
+  #snb_wrap{left:-800px;}
+  .dark #snb_wrap,
+  #snb_wrap.active{width:100%;}
+  .dark #snb_wrap{left:-800px;}
+  #search_wrap{width:90%;margin:70px auto 0}
+  input[type=text]{height:35px;font-size:1.6rem}
+  .search_button{width:10%;height:10%;margin-left:10px;background:url("../images/ico_search.svg") no-repeat center center;text-indent:-9999px;line-height:35px}
+  .dark .search_button{width:10%;height:10%;margin-left:10px;background:url("../images/ico_search_dark.svg") no-repeat top center;text-indent:-9999px;line-height:35px}
+  #snb{width:80%;margin:0 auto;text-align:center}
+  #snb>li{margin:0 0 4vh}
+  #snb>li:first-child{margin-top:20px}
+  #snb>li>a{font-size:2rem;font-weight:bold}
+  #snb>li>ul{margin-top:5px}
+  #snb>li>ul>li{display:inline-block;margin:0 20px 0 0}
+  #snb>li>ul>li>a{font-size:1.5rem;color:#555}
+  .dark #snb>li>ul>li>a{font-size:1.5rem;color:#ccc}
+
+  /* goverment */
+  #goverment_contents{padding-left:0 !important;padding-top:60px;width:initial}
+  #m_tit_goverment{width:100%;height:43vh;background-image:url("../images/bg_m_tit_goverment_1.png");background-size:contain;background-position:center bottom;background-repeat:no-repeat;animation:bg_moving 10s}
+  .dark #m_tit_goverment{width:100%;height:43vh;background-image:url("../images/bg_m_tit_goverment_1_dark.png");background-size:contain;background-repeat:no-repeat;animation:bg_moving_dark 10s}
+  #m_goverment_content_txt{padding:5vh 0 0;text-align:center}
+  #m_goverment_content_txt>div{font-size:6vw;margin-bottom:10px}
+  #m_goverment_content_txt>span{font-size:4vw}
+  @keyframes bg_moving{
+    0%{background-image:url("../images/bg_m_tit_goverment_4.png")}
+    25%{background-image:url("../images/bg_m_tit_goverment_4.png")}
+    50%{background-image:url("../images/bg_m_tit_goverment_5.png")}
+    75%{background-image:url("../images/bg_m_tit_goverment_2.png")}
+    100%{background-image:url("../images/bg_m_tit_goverment_1.png")} 
+  }
+  @keyframes bg_moving_dark{
+    0%{background-image:url("../images/bg_m_tit_goverment_4_dark.png")}
+    25%{background-image:url("../images/bg_m_tit_goverment_4_dark.png")}
+    50%{background-image:url("../images/bg_m_tit_goverment_5_dark.png")}
+    75%{background-image:url("../images/bg_m_tit_goverment_2_dark.png")}
+    100%{background-image:url("../images/bg_m_tit_goverment_1_dark.png")} 
+  }
+  #goverment_find,
+  #goverment_service,
+  #goverment_content4,
+  .dark #goverment_solution,
+  .dark #goverment_service,
+  .dark #goverment_content4{margin:100px 0 0;padding:0 10px;background-origin:content-box;background-position:center}
+  #goverment_solution{padding:80px 20px 0;background-position-y:60%;}
+  #goverment_solution_visual{height:200px;}
+  #goverment_solution_txt>a{position:relative;top:0;left:50%;width:50%;padding-top:20px;font-size:1.8rem;transform:translateX(-50%)}
+  #goverment_solution_txt>div>span:first-child{text-align:center;font-size:4.5vw;word-break:keep-all;}
+  #goverment_solution_txt>div>span:last-child{display:block;text-align:center;font-size:1.4rem}
+  #goverment_solution_visual{height:25vh;margin-top:7vh;margin-bottom:0;background-position:bottom;background-size:cover;}
+  #goverment_service>div{padding:35vw 0 0;background:none}
+  #goverment_service>a{width:50%;margin:20px auto;font-size:1.8rem}
+  #goverment_service_1 .goverment_service_visual,
+  #goverment_service_2 .goverment_service_visual,
+  #goverment_service_3 .goverment_service_visual{top:0;border-width:3px}
+  .goverment_service_visual{width:30vw;height:30vw;margin:0 auto;background-repeat:no-repeat}
+  .goverment_service_txt>span:first-child{display:block;margin:0;font-size:2rem}
+  .goverment_service_txt>span:last-child{font-size:1.6vh}
+  #goverment_content4_txt{padding:0;text-align:center}
+  #goverment_content4_txt>span{text-align:center;font-size:1.7rem}
+  #goverment_content4_txt a{width:50%;margin:10px 0 20px;font-size:1.8rem}
+  #footer_wrap{height:500px;margin-top:150px;padding:40px 0 0}
+  .dark #footer_wrap{height:500px;margin-top:150px;padding:40px 0 0}
+  .site_map_1 a,
+  .site_map_2 a{font-size:1.5rem;line-height:30px}
+  .sns_wrap{width:70%;margin:0 auto}
+  .sns_wrap>a{width:25px;height:25px;margin:0 10px}
+  .copy{font-size:1.3rem;line-height:20px}
+}
